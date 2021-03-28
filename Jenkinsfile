@@ -25,14 +25,18 @@ pipeline {
 
         stage('Test'){
             steps{
-                bat 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class CarTest --reports-dir="reports"'
+                bat '''cd src
+                java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class CarTest --reports-dir="reports"
+                '''
                 junit 'src/reports/*-jupiter.xml'
             }
         }
 
         stage('Deploy'){
             steps{
-                bat 'cd src/ ; java App' 
+                bat '''cd src; 
+                java App
+                '''
             }
         }
     }
