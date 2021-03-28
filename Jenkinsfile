@@ -34,7 +34,7 @@ pipeline {
 
         stage('Deploy'){
             steps{
-                bat '''cd src; 
+                bat '''cd src 
                 java App
                 '''
             }
