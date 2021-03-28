@@ -17,7 +17,7 @@ pipeline {
                 bat 'cd lib '
                 bat 'copy D:\\junit\\junit-platform-console-standalone-1.7.0-all.jar  .'
                 bat 'cd src'
-                bat 'javac -cp ../lib/junit-platform-console-standalone-1.7.0-all.jar" CarTest.java Car.java App.java '
+                bat 'javac -cp ../lib/junit-platform-console-standalone-1.7.0-all.jar CarTest.java Car.java App.java'
             }
         }
 
